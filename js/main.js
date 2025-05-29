@@ -53,29 +53,29 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Form submission
-  const contactForm = document.getElementById("contactForm")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
+  // // Form submission
+  // const contactForm = document.getElementById("contactForm")
+  // if (contactForm) {
+  //   contactForm.addEventListener("submit", (e) => {
+  //     // e.preventDefault()
 
-      // Get form values
-      const name = document.getElementById("name").value
-      const email = document.getElementById("email").value
-      const subject = document.getElementById("subject").value
-      const message = document.getElementById("message").value
+  //     // Get form values
+  //     const name = document.getElementById("name").value
+  //     const email = document.getElementById("email").value
+  //     // const subject = document.getElementById("subject").value
+  //     const message = document.getElementById("message").value
 
-      // Here you would typically send the form data to a server
-      // For now, we'll just log it to the console and show an alert
-      console.log("Form submitted:", { name, email, subject, message })
+  //     // Here you would typically send the form data to a server
+  //     // For now, we'll just log it to the console and show an alert
+  //     console.log("Form submitted:", { name, email, message })
 
-      // Show success message
-      alert("¡Gracias por tu mensaje! Te contactaré pronto.")
+  //     // Show success message
+  //     alert("¡Gracias por tu mensaje! Te contactaré pronto.")
 
-      // Reset form
-      contactForm.reset()
-    })
-  }
+  //     // Reset form
+  //     contactForm.reset()
+  //   })
+  // }
 
   // Skill bar animation
   const skillBars = document.querySelectorAll(".skill-level")
