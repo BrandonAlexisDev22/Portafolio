@@ -103,39 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //   })
   // }
 
-  // Skill bar animation
-  const skillBars = document.querySelectorAll(".skill-level")
-
-  const animateSkillBars = () => {
-    skillBars.forEach((bar) => {
-      const width = bar.style.width
-      bar.style.width = "0"
-      setTimeout(() => {
-        bar.style.width = width
-      }, 100)
-    })
-  }
-
-  // Animate skill bars when they come into view
-  const skillsSection = document.querySelector(".skills")
-
-  const observerOptions = {
-    threshold: 0.3,
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateSkillBars()
-        observer.unobserve(entry.target)
-      }
-    })
-  }, observerOptions)
-
-  if (skillsSection) {
-    observer.observe(skillsSection)
-  }
-
   // Project card hover effect
   const projectCards = document.querySelectorAll(".project-card")
 

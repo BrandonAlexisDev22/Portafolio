@@ -61,6 +61,14 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
 ul {
   list-style: none;
 }
@@ -75,6 +83,17 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.section-kicker {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .section-title {
@@ -477,39 +496,39 @@ img {
 }
 
 .skill-items {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 15px;
 }
 
 .skill-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+  padding: 18px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-item:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-4px);
 }
 
 .skill-icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--primary-color);
   text-align: center;
 }
 
 .skill-item h4 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--dark-color);
-}
-
-.skill-bar {
-  height: 10px;
-  background-color: var(--border-color);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.skill-level {
-  height: 100%;
-  background-color: var(--primary-color);
-  border-radius: 5px;
 }
 
 /* Projects Section */
@@ -526,6 +545,8 @@ img {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--card-bg);
   border-radius: 10px;
   overflow: hidden;
@@ -583,6 +604,9 @@ img {
 }
 
 .project-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 20px;
 }
 
@@ -616,6 +640,7 @@ img {
 .project-links {
   display: flex;
   gap: 10px;
+  margin-top: auto;
 }
 
 .github-cta {

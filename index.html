@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio de Brandon Alexis Quintero Alvarez, Técnico en Desarrollo de Software. Proyectos en React, Node.js, JavaScript y más.">
     <meta name="theme-color" content="#2563eb">
+    <meta property="og:title" content="Brandon Alexis Quintero Alvarez - Portfolio">
+    <meta property="og:description" content="Técnico en Desarrollo de Software. Proyectos en React, Node.js, JavaScript y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/profile.jpeg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <title>Brandon Alexis Quintero Alvarez - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +68,7 @@
 
     <section id="about" class="about">
         <div class="container">
+            <span class="section-kicker">Quién soy</span>
             <h2 class="section-title">Sobre Mí</h2>
             <div class="about-content reveal">
                 <div class="about-image">
@@ -84,6 +90,7 @@
 
     <section id="skills" class="skills">
         <div class="container">
+            <span class="section-kicker">Lo que domino</span>
             <h2 class="section-title">Mis Habilidades</h2>
             <div class="skills-container">
                 <div class="skill-category reveal">
@@ -92,98 +99,62 @@
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-python"></i></div>
                             <h4>Python</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-js"></i></div>
                             <h4>JavaScript</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-node"></i></div>
                             <h4>Node.js</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-js"></i></div>
                             <h4>TypeScript</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category reveal">
                     <h3>Tecnologías Web</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-html5"></i></div>
                             <h4>HTML5</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
                             <h4>CSS3</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-database"></i></div>
                             <h4>SQL</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
                             <h4>Git</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category reveal">
                     <h3>Habilidades Blandas</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-users"></i></div>
                             <h4>Trabajo en Equipo</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
                             <h4>Resolución de Problemas</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-comments"></i></div>
                             <h4>Comunicación</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-tasks"></i></div>
                             <h4>Gestión del Tiempo</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,6 +164,7 @@
 
     <section id="projects" class="projects">
         <div class="container">
+            <span class="section-kicker">Proyectos recientes</span>
             <h2 class="section-title">Mis Proyectos</h2>
             <div class="projects-grid">
                 <div class="project-card project-card--featured reveal">
@@ -229,8 +201,8 @@
                             <span>CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://etherium-game.vercel.app/" class="btn btn-sm btn-primary" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/BrandonAlexisDev22/Etherium-Game" class="btn btn-sm btn-secondary" target="_blank">Ver Código</a>
+                            <a href="https://etherium-game.vercel.app/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Ver Demo</a>
+                            <a href="https://github.com/BrandonAlexisDev22/Etherium-Game" class="btn btn-sm btn-secondary" target="_blank" rel="noopener">Ver Código</a>
                         </div>
                     </div>
                 </div>
@@ -248,8 +220,8 @@
                             <span>JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://rider-zone.vercel.app/" class="btn btn-sm btn-primary" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/BrandonAlexisDev22/RiderZone" class="btn btn-sm btn-secondary" target="_blank">Ver Código</a>
+                            <a href="https://rider-zone.vercel.app/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Ver Demo</a>
+                            <a href="https://github.com/BrandonAlexisDev22/RiderZone" class="btn btn-sm btn-secondary" target="_blank" rel="noopener">Ver Código</a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +247,7 @@
             
             <div class="github-cta">
                 <p>Descubre más proyectos en mi GitHub</p>
-                <a href="https://github.com/BrandonAlexisDev22" class="btn btn-github" target="_blank">
+                <a href="https://github.com/BrandonAlexisDev22" class="btn btn-github" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i> Ver GitHub
                 </a>
             </div>
@@ -284,6 +256,7 @@
 
     <section id="contact" class="contact">
         <div class="container">
+            <span class="section-kicker">Hablemos</span>
             <h2 class="section-title">Contacto</h2>
             <div class="contact-content">
                 <div class="contact-info reveal">
@@ -307,9 +280,9 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/BrandonAlexisDev22" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/brandonalexisdev" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://wa.me/573245177534" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/BrandonAlexisDev22" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/brandonalexisdev" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/573245177534" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
