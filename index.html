@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Brandon Alexis Quintero Alvarez, Técnico en Desarrollo de Software. Proyectos en React, Node.js, JavaScript y más.">
+    <meta name="theme-color" content="#2563eb">
     <title>Brandon Alexis Quintero Alvarez - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,28 +17,38 @@
         <nav id="navbar">
             <div class="container">
                 <h1 class="logo">BA<span>QA</span></h1>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Inicio</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="./assets/files/CV-BRANDON.pdf" download="CV-BRANDON.pdf">Descargar CV</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Inicio</a></li>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="./assets/files/CV-BRANDON.pdf" download="CV-BRANDON.pdf">Descargar CV</a></li>
+                    </ul>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <span class="blob blob-1"></span>
+            <span class="blob blob-2"></span>
+        </div>
         <div class="container">
             <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-circle"></i> Disponible para nuevos proyectos</span>
                 <h1>Brandon Alexis Quintero Alvarez</h1>
-                <h2>Tecnico en Desarrollo de Software</h2>
+                <h2>Técnico en Desarrollo de Software</h2>
                 <p>Desarrollador apasionado con más de 3 años de experiencia en el mundo del software</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
@@ -41,12 +56,15 @@
                 </div>
             </div>
         </div>
+        <a href="#about" class="scroll-indicator" aria-label="Bajar a la siguiente sección">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">Sobre Mí</h2>
-            <div class="about-content">
+            <div class="about-content reveal">
                 <div class="about-image">
                     <div class="profile-img">
                         <img src="assets/img/profile.jpeg" alt="Brandon Alexis Quintero Alvarez">
@@ -68,7 +86,7 @@
         <div class="container">
             <h2 class="section-title">Mis Habilidades</h2>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>Stack Lenguajes</h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -102,7 +120,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>Tecnologías Web</h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -136,7 +154,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <h3>Habilidades Blandas</h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -177,7 +195,28 @@
         <div class="container">
             <h2 class="section-title">Mis Proyectos</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card project-card--featured reveal">
+                    <div class="project-img icon-tile parku-tile">
+                        <i class="fa-solid fa-square-parking"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Proyecto destacado</span>
+                        <h3>ParkU</h3>
+                        <p>Sistema de gestión de parqueadero desarrollado para el SENA: control de acceso, registro de vehículos y administración de espacios en tiempo real, con backend propio y autenticación.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Vite</span>
+                            <span>React Query</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://park-u.vercel.app/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Ver Demo</a>
+                            <a href="https://github.com/BrandonAlexisDev22/ParkU" class="btn btn-sm btn-secondary" target="_blank" rel="noopener">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
                     <div class="project-img">
                         <img src="assets/img/etherium.png" alt="ETHERIUM-GAME">
                     </div>
@@ -190,13 +229,13 @@
                             <span>CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://etherium-game.vercel.app/" class="btn btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://etherium-game.vercel.app/" class="btn btn-sm btn-primary" target="_blank">Ver Demo</a>
                             <a href="https://github.com/BrandonAlexisDev22/Etherium-Game" class="btn btn-sm btn-secondary" target="_blank">Ver Código</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-img">
                         <img src="assets/img/riderzone.png" alt="RIDERZONE">
                     </div>
@@ -209,13 +248,13 @@
                             <span>JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://rider-zone.vercel.app/" class="btn btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://rider-zone.vercel.app/" class="btn btn-sm btn-primary" target="_blank">Ver Demo</a>
                             <a href="https://github.com/BrandonAlexisDev22/RiderZone" class="btn btn-sm btn-secondary" target="_blank">Ver Código</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-img">
                         <img src="assets/img/ny-app.png" alt="Proyecto Personal">
                     </div>
@@ -247,7 +286,7 @@
         <div class="container">
             <h2 class="section-title">Contacto</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info reveal">
                     <h3>Información de Contacto</h3>
                     <div class="contact-details">
                         <div class="contact-item">
@@ -269,12 +308,12 @@
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/BrandonAlexisDev22" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="www.linkedin.com/in/brandonalexisdev" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/brandonalexisdev" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://wa.me/573245177534" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-form reveal">
                     <h3>Envíame un Mensaje</h3>
                     <form id="contactForm" action="https://formspree.io/f/xpwdvnze" method="POST">
                         <div class="form-group">
@@ -320,6 +359,9 @@
             </div>
         </div>
     </footer>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="js/main.js"></script>
 </body>
 </html>

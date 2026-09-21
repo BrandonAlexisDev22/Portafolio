@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Dark mode toggle
+  const themeToggle = document.getElementById("themeToggle")
+  const themeIcon = themeToggle?.querySelector("i")
+  const root = document.documentElement
+
+  const applyTheme = (theme) => {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark")
+      themeIcon?.classList.replace("fa-moon", "fa-sun")
+    } else {
+      root.removeAttribute("data-theme")
+      themeIcon?.classList.replace("fa-sun", "fa-moon")
+    }
+  }
+
+  const savedTheme = localStorage.getItem("theme")
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+  applyTheme(savedTheme || (prefersDark ? "dark" : "light"))
+
+  themeToggle?.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark"
+    const nextTheme = isDark ? "light" : "dark"
+    applyTheme(nextTheme)
+    localStorage.setItem("theme", nextTheme)
+  })
+
   // Mobile Navigation Toggle
   const hamburger = document.querySelector(".hamburger")
   const navLinks = document.querySelector(".nav-links")
@@ -121,5 +147,33 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("mouseleave", () => {
       card.style.transform = "translateY(0)"
     })
+  })
+
+  // Reveal sections on scroll
+  const revealElements = document.querySelectorAll(".reveal")
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view")
+          revealObserver.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.15 }
+  )
+
+  revealElements.forEach((el) => revealObserver.observe(el))
+
+  // Back to top button
+  const backToTop = document.getElementById("backToTop")
+
+  window.addEventListener("scroll", () => {
+    backToTop?.classList.toggle("visible", window.scrollY > 400)
+  })
+
+  backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
   })
 })
